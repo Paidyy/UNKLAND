@@ -1,0 +1,8 @@
+too lazy to add this into the game so:
+
+WASD, ARROWS: walking
+CTRL: sprinting
+Q: remove current item from inventory
+LEFT CLICK: break block / attack
+RIGHT CLICK: place block / open workbench / use item
+E: close crafting

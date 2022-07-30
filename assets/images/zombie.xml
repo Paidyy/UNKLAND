@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="zombie.png">
+	<!-- Created with Adobe Animate version 22.0.7.214 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="0" y="0" width="38" height="20"/>
+	<SubTexture name="walk0000" x="0" y="20" width="38" height="20"/>
+	<SubTexture name="walk0001" x="0" y="20" width="38" height="20"/>
+	<SubTexture name="walk0002" x="0" y="20" width="38" height="20"/>
+	<SubTexture name="walk0003" x="0" y="20" width="38" height="20"/>
+	<SubTexture name="walk0004" x="0" y="20" width="38" height="20"/>
+	<SubTexture name="walk0005" x="0" y="40" width="38" height="20"/>
+	<SubTexture name="walk0006" x="0" y="40" width="38" height="20"/>
+	<SubTexture name="walk0007" x="0" y="40" width="38" height="20"/>
+	<SubTexture name="walk0008" x="0" y="40" width="38" height="20"/>
+	<SubTexture name="walk0009" x="0" y="40" width="38" height="20"/>
+</TextureAtlas>
