@@ -96,6 +96,11 @@ class Crafting extends FlxSubState {
     }
 
     public function createCallback() {
+		if (!(PlayState.instance.player.invSize() < 6
+			|| PlayState.instance.player.inventoryContainsItem(new Item(Crafting.instance.swagItems[curSlot].type)))) {
+			return;
+		}
+
 		if (unlimitedResources) {
 			PlayState.instance.player.addItem(new Item(Crafting.instance.swagItems[curSlot].type, Crafting.instance.swagItems[curSlot].amount));
 			return;
