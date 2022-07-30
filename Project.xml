@@ -4,7 +4,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="hxjam-22" file="hxjam-22" main="Main" version="0.0.1" company="HaxeFlixel" />
+	<app title="UNKLAND" file="UNKLAND" main="Main" version="0.0.1" company="paidyy" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -33,7 +33,7 @@
 	<source path="source" />
 	<assets path="assets" />
 
-	<assets path="CONTROLS.txt"/>
+	<assets path="CONTROLS.txt" if="desktop"/>
 
 	<!-- _______________________________ Libraries ______________________________ -->
 

@@ -43,6 +43,15 @@ class Player extends WorldObject {
 		inventory = new FlxTypedGroup<Item>(6);
 		inventory.add(new Item(WORKBENCH));
     }
+	
+	public function invSize():Int {
+		var count = 0;
+		for (item in inventory) {
+			if (item != null && item.exists)
+				count++;
+		}
+		return count;
+	}
 
 	override public function update(elapsed) {
 		super.update(elapsed);

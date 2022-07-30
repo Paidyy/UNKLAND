@@ -18,10 +18,9 @@ class Item extends ItemRoot {
 	override public function update(elapsed) {
 		super.update(elapsed);
 
-		if (onGround && PlayState.instance.player.inventory.length < 6) {
+		if (onGround && (PlayState.instance.player.invSize() < 6 || PlayState.instance.player.inventoryContainsItem(new Item(type)))) {
 			setPosition(FlxMath.lerp(x, PlayState.instance.player.x, 0.01), FlxMath.lerp(y, PlayState.instance.player.y, 0.01));
 
-            
 			if (FlxMath.distanceBetween(this, PlayState.instance.player) < 30) {
 				onGround = false;
 

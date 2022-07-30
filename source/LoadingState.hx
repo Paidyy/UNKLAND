@@ -12,6 +12,14 @@ class LoadingState extends FlxState {
 		loading.screenCenter();
         add(loading);
 
+        #if html5
+        var warning = new FlxText(0, 0, 0, "HTML VERSION IS EXPERIMENTAL, DESKTOP VERSION IS RECOMMENDED", 20);
+		warning.color = FlxColor.RED;
+		warning.screenCenter();
+        warning.y = loading.y + loading.height + 25;
+        add(warning);
+        #end
+
         var text = new FlxText(0, 0, 0, "", 20);
 		text.font = "assets/fonts/vcr.ttf";
 		text.text = Util.randomFileLine("assets/data/loadingTexts.txt");

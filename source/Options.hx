@@ -6,16 +6,36 @@ import flixel.util.FlxSave;
 using StringTools;
 
 class Options {
-    public static var fps:Int = 144;
-	public static var accurateChunkLoading:Bool = true;
+    public static var fps:Int;
+	public static var accurateChunkLoading:Bool;
 
     static var _save:FlxSave;
 
     public static function initialize() {
         _save = new FlxSave();
-		_save.bind("save", "P-HXJ22");
-        loadAndSave();
+		_save.bind("save");
+
+		if (_save.data.fps == null)
+			_save.data.fps = 60;
+		if (_save.data.accurateChunkLoading == null)
+			_save.data.accurateChunkLoading = true;
+
+		fps = _save.data.fps;
+		accurateChunkLoading = _save.data.accurateChunkLoading;
     }
+
+	public static function saveAll() {
+		_save.data.fps = fps;
+		_save.data.accurateChunkLoading = accurateChunkLoading;
+	}
+
+	public static function applyAll() {
+		FlxG.updateFramerate = fps;
+		FlxG.drawFramerate = fps;
+	}
+
+	/*
+	now i know why people hate javascript
 
     public static function loadAndSave() {
 		for (i in getClassOptions()) {
@@ -51,11 +71,6 @@ class Options {
 		_save.flush();
 	}
 
-	public static function applyAll() {
-		FlxG.updateFramerate = fps;
-		FlxG.drawFramerate = fps;
-	}
-
 	static function getClassOptions():Array<String> {
 		var arr:Array<String> = [];
 		for (i in Type.getClassFields(Options)) {
@@ -67,4 +82,5 @@ class Options {
 		}
 		return arr;
 	}
+	*/
 }

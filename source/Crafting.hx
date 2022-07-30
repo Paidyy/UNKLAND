@@ -23,7 +23,7 @@ class Crafting extends FlxSubState {
 	public var ingridients:FlxGroup;
 	public var sideBar:FlxSprite;
 
-	var unlimitedResources:Bool = true;
+	var unlimitedResources:Bool = false;
 
 	override public function create() {
         super.create();

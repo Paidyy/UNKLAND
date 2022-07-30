@@ -1,7 +1,6 @@
 package;
 
 import flixel.FlxSubState;
-import sys.thread.Thread;
 import flixel.text.FlxText;
 import Chunk.ChunkMap;
 import flixel.FlxBasic;
