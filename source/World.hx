@@ -42,7 +42,7 @@ class World {
     }
 
 	public function update(elapsed:Float) {
-		curTime += elapsed * 16;
+		curTime += elapsed * 24;
 		FlxG.watch.addQuick("worldTime", curTime);
 	}
 
